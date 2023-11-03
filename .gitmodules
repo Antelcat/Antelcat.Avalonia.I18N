@@ -1,0 +1,3 @@
+[submodule "extern/Antelcat.Wpf.I18N"]
+	path = extern/Antelcat.Wpf.I18N
+	url = https://github.com/Antelcat/Antelcat.Wpf.I18N.git

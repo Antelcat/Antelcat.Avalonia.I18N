@@ -5,6 +5,7 @@
         xmlns:viewModels="clr-namespace:Antelcat.Avalonia.I18N.Demo.ViewModels"
         xmlns:ms="clr-namespace:Antelcat.Avalonia.I18N.Demo.Models"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:CompileBindings="True"
 		x:DataType="viewModels:MainWindowViewModel"
         x:Class="Antelcat.Avalonia.I18N.Demo.Views.MainWindow"
         Title="Antelcat.Avalonia.I18N.Demo">
@@ -23,7 +24,7 @@
 			<StackPanel DataContext="{Binding SimpleViewModel}" Spacing="10">
 				<TextBlock>Enter your Name:</TextBlock>
 				<TextBox Text="{Binding Name}" />
-				<TextBox Text="{Binding Test.Number}"
+				<TextBox Text="{I18N {x:Static ms:LangKeys.Available_languages}}"
 						 IsReadOnly="True"
 						 FontWeight="Bold" />
 			</StackPanel>

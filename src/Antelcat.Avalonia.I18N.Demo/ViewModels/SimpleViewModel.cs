@@ -46,22 +46,8 @@ namespace Antelcat.Avalonia.I18N.Demo.ViewModels
             }
         }
 
-        public ExpandoObject Test { get; set; } = new();
 
-        public SimpleViewModel()
-        {
-            var timer = new System.Timers.Timer
-            {
-                Interval  = 1000,
-                AutoReset = true
-            };
-            timer.Elapsed += (_, __) =>
-            {
-                ((dynamic)Test).Number += 1;
-            };
-            timer.Start();
-        }
-        
+      
         // Greeting will change based on a Name.
         public string Greeting
         {

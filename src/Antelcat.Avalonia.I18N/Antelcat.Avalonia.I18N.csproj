@@ -17,22 +17,44 @@
         <Copyright>Copyright Antelcat. All rights reserved</Copyright>
         <PackageProjectUrl>https://github.com/Antelcat/Antelcat.Avalonia.I18N</PackageProjectUrl>
         <RepositoryUrl>https://github.com/Antelcat/Antelcat.Avalonia.I18N.git</RepositoryUrl>
-        <AssemblyVersion>1.1.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
         <FileVersion>1.0.0</FileVersion>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <Authors>Antelcat</Authors>
         <RepositoryType>git</RepositoryType>
-        <PackageReleaseNotes>Reduce xaml declaration length; Support cs code translate.</PackageReleaseNotes>
+        <PackageReleaseNotes>Initial release</PackageReleaseNotes>
         <PackageTags>dotnet;Avalonia;markup;extension;MVVM;i18n;language;binding;.NET;</PackageTags>
         <Version>1.0.0</Version>
-        
+
         <DefineConstants>AVALONIA</DefineConstants>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageIcon>Icon.png</PackageIcon>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Avalonia" Version="11.0.0" />
+        <PackageReference Include="Avalonia" Version="11.0.0"/>
     </ItemGroup>
 
-    <Import Project="..\..\extern\Antelcat.Wpf.I18N\src\Antelcat.Shared.I18N\Antelcat.Shared.I18N.projitems" Label="Shared" />
+    <ItemGroup>
+        <Content Include="..\..\README.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </Content>
+        <None Include="..\..\extern\Antelcat.Wpf.I18N\Icon.png">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+            <Link>Icon.png</Link>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup Label="Package">
+        <None Include="..\Antelcat.Avalonia.I18N.SourceGenerators\bin\$(Configuration)\netstandard2.0\Antelcat.Avalonia.I18N.SourceGenerators.dll" PackagePath="analyzers\dotnet\cs" Pack="true" Visible="false" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference ReferenceOutputAssembly="false" Include="..\Antelcat.Avalonia.I18N.SourceGenerators\Antelcat.Avalonia.I18N.SourceGenerators.csproj" />
+    </ItemGroup>
+
+    <Import Project="..\..\extern\Antelcat.Wpf.I18N\src\Antelcat.Shared.I18N\Antelcat.Shared.I18N.projitems" Label="Shared"/>
 
 </Project>

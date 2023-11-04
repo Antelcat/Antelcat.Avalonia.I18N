@@ -5,8 +5,9 @@
         xmlns:viewModels="clr-namespace:Antelcat.Avalonia.I18N.Demo.ViewModels"
         xmlns:ms="clr-namespace:Antelcat.Avalonia.I18N.Demo.Models"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-
+        Height="400" Width="800"
         x:DataType="viewModels:ViewModel"
+        WindowStartupLocation="CenterScreen"
         x:Class="Antelcat.Avalonia.I18N.Demo.Views.MainWindow"
         Title="Antelcat.Avalonia.I18N.Demo">
 
@@ -23,7 +24,7 @@
             <ScrollViewer
                 Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Grid,AncestorLevel=1},Path=Height}">
                 <StackPanel>
-                    <Menu Margin="0" Padding="0" Background="Transparent">
+                    <Menu Margin="12" Padding="0" Background="Transparent">
                         <MenuItem Margin="0" Padding="0">
                             <MenuItem.Header>
                                 <TextBlock FontSize="24">
@@ -43,7 +44,7 @@
                             <ColumnDefinition Width="200" />
                         </Grid.ColumnDefinitions>
                         <StackPanel>
-                            <Grid Margin="0,0,10,0">
+                            <Grid>
                                 <StackPanel>
                                     <Menu Background="Transparent">
                                         <MenuItem>
@@ -55,6 +56,7 @@
                                     </Menu>
                                     <ComboBox
                                         Margin="12,0"
+                                        Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Grid,AncestorLevel=1},Path=Width}"
                                         SelectedItem="{Binding SelectedKey}"
                                         ItemsSource="{Binding AvailableKeys}" />
                                     <Menu Background="Transparent">
@@ -65,26 +67,23 @@
                                         </MenuItem>
                                     </Menu>
 
-                                    <TextBox Text="{I18N {Binding SelectedKey}}" Margin="12,0" />
+                                    <TextBox Margin="12,0" Text="{I18N {Binding SelectedKey}}" />
 
                                 </StackPanel>
                             </Grid>
-                            <Grid Grid.Row="1" Margin="10,12,10,0">
+                            <Grid Grid.Row="1" Margin="12,10">
                                 <StackPanel>
                                     <TextBlock Text="{I18N {x:Static ms:LangKeys.Input_your_text_to_translate}}"></TextBlock>
-                                    <TextBox Margin="0,10"
-                                             Text="{Binding InputText}">
-                                    </TextBox>
+                                    <TextBox Margin="0,10" Text="{Binding InputText}"/>
                                     <TextBlock Text="{I18N {x:Static ms:LangKeys.Translated_text}}" />
-                                    <TextBlock Text="{I18N {Binding InputText}}" Margin="0,10" />
+                                    <TextBlock Text="{I18N {Binding InputText}}" />
                                 </StackPanel>
                             </Grid>
                         </StackPanel>
                         <Grid Grid.Column="1">
                             <StackPanel>
-                                <TextBlock Text="{I18N {x:Static ms:LangKeys.Available_languages}}"></TextBlock>
-                                <ListBox Margin="0,10"
-                                         ItemsSource="{Binding AvailableCultures}"
+                                <TextBlock Margin="0,10" Text="{I18N {x:Static ms:LangKeys.Available_languages}}"></TextBlock>
+                                <ListBox ItemsSource="{Binding AvailableCultures}"
                                          SelectedItem="{Binding Culture}">
                                     <ListBox.ItemTemplate>
                                         <DataTemplate>
@@ -96,7 +95,6 @@
                         </Grid>
                     </Grid>
                 </StackPanel>
-
             </ScrollViewer>
         </Grid>
     </Border>

@@ -21,7 +21,6 @@
         <FileVersion>1.0.0</FileVersion>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <Authors>Antelcat</Authors>
-        <PackageReadmeFile>README.md</PackageReadmeFile>
         <RepositoryType>git</RepositoryType>
         <PackageReleaseNotes>Reduce xaml declaration length; Support cs code translate.</PackageReleaseNotes>
         <PackageTags>dotnet;Avalonia;markup;extension;MVVM;i18n;language;binding;.NET;</PackageTags>

@@ -1,0 +1,44 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModels="clr-namespace:Antelcat.Avalonia.I18N.Demo.ViewModels"
+        xmlns:ms="clr-namespace:Antelcat.Avalonia.I18N.Demo.Models"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+		x:DataType="viewModels:MainWindowViewModel"
+        x:Class="Antelcat.Avalonia.I18N.Demo.Views.MainWindow"
+        Title="Antelcat.Avalonia.I18N.Demo">
+
+	<!--We are using Compiled bindings. This is not mandatory but makes life easier. Read more about it here:-->
+	<!-- https://docs.avaloniaui.net/docs/next/basics/data/data-binding/compiled-bindings -->
+
+	<Design.DataContext>
+        <viewModels:MainWindowViewModel/>
+    </Design.DataContext>
+
+	<TabControl>
+		
+		<!-- Our Simple ViewModel -->
+		<TabItem Header="Simple ViewModel" >
+			<StackPanel DataContext="{Binding SimpleViewModel}" Spacing="10">
+				<TextBlock>Enter your Name:</TextBlock>
+				<TextBox Text="{Binding Name}" />
+				<TextBox Text="{Binding Test.Number}"
+						 IsReadOnly="True"
+						 FontWeight="Bold" />
+			</StackPanel>
+		</TabItem>
+
+		<!-- Our ReactiveViewModel -->
+		<TabItem Header="Reactive UI" >
+			<StackPanel DataContext="{Binding ReactiveViewModel}" Spacing="10">
+				<TextBlock>Enter your Name:</TextBlock>
+				<TextBox Text="{Binding Name}" />
+				<TextBox Text="{I18N {Binding Name, Mode=OneWay}}"
+						 IsReadOnly="True"
+						 FontWeight="Bold" />
+			</StackPanel>
+		</TabItem>
+		
+	</TabControl>
+</Window>

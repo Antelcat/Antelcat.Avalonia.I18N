@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Antelcat.Avalonia.I18N.Sour
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Feast.CodeAnalysis.Extensions.SourceGenerators", "..\extern\Antelcat.Wpf.I18N\extern\CodeAnalysis.Extensions\src\Feast.CodeAnalysis.Extensions.SourceGenerators\Feast.CodeAnalysis.Extensions.SourceGenerators.csproj", "{94E2F592-7943-435A-9BFA-DE667874BF5C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Antelcat.Avalonia.I18N.Demo", "Antelcat.Avalonia.I18N.Demo\Antelcat.Avalonia.I18N.Demo.csproj", "{88D89542-E824-42C6-8DD9-A50786784439}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{94E2F592-7943-435A-9BFA-DE667874BF5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94E2F592-7943-435A-9BFA-DE667874BF5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94E2F592-7943-435A-9BFA-DE667874BF5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88D89542-E824-42C6-8DD9-A50786784439}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88D89542-E824-42C6-8DD9-A50786784439}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88D89542-E824-42C6-8DD9-A50786784439}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88D89542-E824-42C6-8DD9-A50786784439}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

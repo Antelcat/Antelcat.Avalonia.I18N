@@ -19,7 +19,7 @@ namespace Antelcat.Avalonia.I18N.Demo
             {
                 desktop.MainWindow = new MainWindow
                 {
-                    DataContext = new MainWindowViewModel(),
+                    DataContext = new ViewModel(),
                 };
             }
 

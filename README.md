@@ -20,4 +20,4 @@ Antelcat.Avalonia.`{I18N}`
 
 ## 📖 About
 
-本项目构建自 [Antelcat.Wpf.I18N](https://github.com/Antelcat/Antelcat.Avalonia.I18N) ，并且有着完全一致的API。
+本项目构建自 [Antelcat.Wpf.I18N](https://github.com/Antelcat/Antelcat.Wpf.I18N) ，并且有着完全一致的API。
